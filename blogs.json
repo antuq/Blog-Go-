@@ -1,5 +1,5 @@
 {
-  "lastId": 5,
+  "lastId": 6,
   "blogs": [
     {
       "id": 2,
@@ -21,6 +21,13 @@
       "description": "This is a blog about birds",
       "banner": "banner_image-1722947426082-118132989",
       "date": "2024-08-06T12:30:26.117Z"
+    },
+    {
+      "id": 6,
+      "title": "Legos ain't for young kids",
+      "description": "Legos aint just for kids. There are adult versions which challenging enough for a teenager to sweat and take his time.",
+      "banner": "banner_image-1722987674195-763096160",
+      "date": "2024-08-06T23:41:14.212Z"
     }
   ]
 }
