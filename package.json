@@ -1,0 +1,20 @@
+{
+  "name": "onlineblogapplication",
+  "version": "1.0.0",
+  "description": "Online blogging application for user to read blogs and create blogs.",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Ameen Iqbal Arab",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "bootstrap-icons": "^1.11.3",
+    "ejs": "^3.1.10",
+    "express": "^4.19.2",
+    "multer": "^1.4.5-lts.1"
+  }
+}

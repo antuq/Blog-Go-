@@ -1,0 +1,41 @@
+<%- include("./partials/header.ejs") %>
+    <section id="blog-creation-form" class="container">
+        <h2 class="mt-3">Create Blog:</h2>
+        <form action="/edit/<%= blogEdit.id %>-<%= blogEdit.title.replace(/ /g, '__') %>" method="POST" enctype="multipart/form-data">
+            <%if(locals.blogEdit) {%>
+           <section class="form-group">
+            <input type="hidden" name="current_banner" value="<%= blogEdit.banner %>">
+            <lable for="banner_image">Enter image-file for banner </lable>
+            <input 
+                type="file" 
+                id="banner_image" 
+                class="form-control-file" 
+                name="banner_image" 
+                accept="image/png, image/gif, image/jpeg" 
+                />
+           </section>
+
+           <section class="form-group">
+            <lable for="blog_title">Title</lable>
+            <input type="text" 
+                id="blog_title" 
+                name="blog_title" 
+                class="form-control"
+                value= "<%= blogEdit.title  %>" required/>
+           </section>
+
+           <section class="form-group">
+            <lable for="blog_description">Description</lable>
+            <input type="text" 
+                id="blog_description" 
+                name="blog_description" 
+                class="form-control"
+                value= "<%= blogEdit.description %>" required/>
+           </section>
+
+           <button class="py-1 px-2 my-3 btn btn-warning text-dark" type="submit">Edit Blog</button>
+            <% } else {%>
+                <h4 class = "text-danger">No blog to edit</h4>
+                <%}%>  
+        </form>
+    </section>

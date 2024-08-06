@@ -1,0 +1,31 @@
+<!-- including header html -->
+<%- include("./partials/header.ejs") %>
+
+<section id="contactUs" class="container py-5">
+    <h1 class="display-4 text-center">Contact Us</h1>
+    <p class="lead text-center mt-4">
+        We would love to hear from you! Whether you have a question, feedback, or just want to say hello, feel free to get in touch with us.
+    </p>
+
+    <section class="row justify-content-center mt-5">
+        <section class="col-md-8">
+            <form action="/submit-contact-form" method="POST">
+                <section class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" class="form-control" id="name" name="name" required>
+                </section>
+                <section class="form-group mt-3">
+                    <label for="email">Email</label>
+                    <input type="email" class="form-control" id="email" name="email" required>
+                </section>
+                <section class="form-group mt-3">
+                    <label for="message">Message</label>
+                    <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+                </section>
+                <button type="submit" class="btn btn-warning mt-4">Send Message</button>
+            </form>
+        </section>
+    </section>
+</section>
+
+<%- include("./partials/footer.ejs") %>

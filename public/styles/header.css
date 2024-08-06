@@ -1,0 +1,17 @@
+
+.icon-link {
+    text-decoration: none;
+    color: aliceblue;
+}
+
+.icon {
+    font-size: 1.5rem;
+    position: relative;
+    bottom: 0.35rem;
+}
+
+.search-form:focus{
+    outline: 2px solid #ffd700; /* Yellow outline */
+    box-shadow: 0 0 0 0.2rem rgba(255, 215, 0, 0.25); /* Adjust the shadow to match the outline */
+  }
+

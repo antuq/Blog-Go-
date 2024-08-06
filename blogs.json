@@ -1,0 +1,26 @@
+{
+  "lastId": 5,
+  "blogs": [
+    {
+      "id": 2,
+      "title": "Why fountain pens are so expensive?",
+      "description": "The first and most apparent reason fountain pens are expensive is that some models are made of high-quality materials. Using gold or titanium nibs can elevate the writing experience.",
+      "banner": "banner_image-1720490311403-112234273",
+      "date": "2024-07-09T01:58:31.426Z"
+    },
+    {
+      "id": 3,
+      "title": "How to start your life",
+      "description": "You can't start your life, you can just live your life.",
+      "banner": "banner_image-1720490329954-822872586",
+      "date": "2024-07-09T01:58:50.027Z"
+    },
+    {
+      "id": 5,
+      "title": "Birds ",
+      "description": "This is a blog about birds",
+      "banner": "banner_image-1722947426082-118132989",
+      "date": "2024-08-06T12:30:26.117Z"
+    }
+  ]
+}

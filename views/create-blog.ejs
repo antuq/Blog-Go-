@@ -1,0 +1,35 @@
+<%- include("./partials/header.ejs") %>
+    <section id="blog-creation-form" class="container">
+        <h2 class="mt-3">Create Blog:</h2>
+        <form action="/create-blog" method="POST" enctype="multipart/form-data">
+
+           <section class="form-group">
+            <lable for="banner_image">Enter image-file for banner </lable>
+            <input 
+                type="file" 
+                id="banner_image" 
+                class="form-control-file" 
+                name="banner_image" //used by multer
+                accept="image/png, image/gif, image/jpeg" />
+           </section>
+
+           <section class="form-group">
+            <lable for="blog_title">Enter Title</lable>
+            <input type="text" 
+                id="blog_title" 
+                name="blog_title" 
+                class="form-control" required />
+           </section>
+
+           <section class="form-group">
+            <lable for="blog_description">Enter Description</lable>
+            <input type="text" 
+                id="blog_description" 
+                name="blog_description" 
+                class="form-control" required />
+           </section>
+
+           <button type="submit">Publish Blog</button>
+
+        </form>
+    </section>

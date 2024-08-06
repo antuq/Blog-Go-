@@ -1,0 +1,45 @@
+<!-- including header html -->
+<%- include("./partials/header.ejs") %>
+<section id="hero-section" class="container my-5">
+    <div class="row p-4 pb-0 pe-lg-0 pt-lg-5 align-items-center rounded-3 border shadow-lg">
+      <div class="col-lg-7 p-3 p-lg-5 pt-lg-3">
+        <h1 class="display-4 fw-bold lh-1 text-body-emphasis">Welcome to Our Blog! Discover Ideas & Insights</h1>
+        <p class="lead">Discover inspiring stories and expert insights from our passionate community. Whether you're here to learn or just to get inspired, we've got something for everyone.</p>
+        <div class="d-grid gap-2 d-md-flex justify-content-md-start mb-4 mb-lg-3">
+          <a href="/create-blog" class="btn btn-warning btn-lg px-4 me-md-2 fw-bold">Start your journey of blogging!</a>
+        </div>
+      </div>
+      <div class="col-lg-4 offset-lg-1 p-0 overflow-hidden shadow-lg">
+          <img class="rounded-lg-3" src="/images/blog_hero_section.jpg" alt="hero section photo" width="720">
+      </div>
+    </div>
+</section>
+
+<!-- Featured Section to showcase some blogs -->
+<section id="featured">
+  <div class="container px-4 py-5" id="hanging-icons">
+    <h2 class="pb-2 border-bottom">Featured Blogs</h2>
+      <div class="row mb-2">
+        <% if(locals.featurePost) {%>
+          <% featurePost.forEach(blog => { %>
+            <section class="col-md-6">
+              <section class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                <section class="col p-4 d-flex flex-column position-static">
+                  <h3 class="mb-0"><%= blog.title%></h3>
+                  <section class="mb-1 text-body-secondary"><%= new Date(blog.date).toLocaleDateString() %></section>
+                  <p class="mb-auto"><%= blog.description.slice(0,50)%>..</p>
+                  <a href="/blog/<%=blog.id%>-<%=blog.title.replace(/\s+/g,'__').toLowerCase() %>" class="btn btn-warning text-decoration-none">
+                    Continue reading
+                  </a>
+                </section>
+                <section class="col-auto d-none d-lg-block">
+                  <img src="/uploads/<%= blog.banner %>" alt="Blog Banner" class="img-fluid" style="width: 200px; height: 250px; object-fit: cover;">
+                </section>
+              </section>
+            </section>
+          <%})%>
+        <%}%>
+      </div>
+  </div>
+</section>
+<%- include("./partials/footer.ejs") %>
